@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import { Amplify } from "aws-amplify";
-import awsconfig from "./aws-exports";
 import { fetchAuthSession } from "aws-amplify/auth";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
-Amplify.configure(awsconfig);
 
 const API_URL =
-  "https://7x7l9qzd45.execute-api.eu-central-1.amazonaws.com/prod";
+  "https://7czk6mssag.execute-api.eu-central-1.amazonaws.com/prod";
 
 async function getIdToken() {
   const session = await fetchAuthSession();
